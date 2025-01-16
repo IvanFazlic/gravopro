@@ -24,14 +24,14 @@ const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory }) => {
   };
 
   return (
-    <div className="relative my-8 max-w-[90%] mx-auto overflow-hidden sm:max-w-[70%] lg:max-w-[60%]">
+    <div className="relative my-8 max-w-[90%] mx-auto overflow-hidden sm:max-w-[70%] lg:max-w-[60%]" style={{textAlign:"center"}}>
       <div className="relative">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full h-[300px] sm:h-[400px]"> {/* Responsive height */}
+            <div key={index} className="relative flex-shrink-0 w-full h-[380px] sm:h-[480px]"> {/* Responsive height */}
               <Image
                 src={image}
                 alt={`Image ${index + 1}`}
@@ -67,7 +67,12 @@ const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory }) => {
           />
         ))}
       </div>
+      <br />
+      <div className="border-t border-b border-black p-4 text-center text-base sm:text-lg md:text-2xl font-medium rounded-lg shadow-md">
+        Nudimo kvalitet, preciznost i brzu realizaciju svih vaših ideja – kontaktirajte nas!
+      </div>
     </div>
+    
   );
 };
 

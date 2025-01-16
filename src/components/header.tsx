@@ -34,13 +34,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold ml-4" onClick={closeMenu}>
-              Gravopro
+              FD Gravoprodukt
             </Link>
           </div>
           <div className="hidden lg:flex items-center space-x-8 mx-4">
             {/* Usluge Dropdown */}
             <div className="relative group">
-              <div className="text-lg text-white hover:text-gray-400 focus:outline-none cursor-pointer">
+              <div className="text-xl text-white hover:text-gray-400 focus:outline-none cursor-pointer">
                 Usluge
               </div>
               <div className="absolute left-0 mt-0 w-56 group-hover:block bg-white text-black rounded-md shadow-lg z-10 hidden">
@@ -55,10 +55,10 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            <Link href="/o-nama" className="text-lg hover:text-gray-400" onClick={closeMenu}>
+            <Link href="/o-nama" className="text-xl hover:text-gray-400" onClick={closeMenu}>
               O nama
             </Link>
-            <Link href="/kontakt" className="text-lg hover:text-gray-400" onClick={closeMenu}>
+            <Link href="/kontakt" className="text-xl hover:text-gray-400" onClick={closeMenu}>
               Kontakt
             </Link>
           </div>

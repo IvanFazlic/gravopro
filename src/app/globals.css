@@ -5,3 +5,9 @@
 body {
   padding-top: 64px; /* Ista visina kao header (h-16 = 64px) */
 }
+.set-an-image{
+  background-image: url("/backgroundImage/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+  background-position: center; /* Centers the image within the element */
+}
