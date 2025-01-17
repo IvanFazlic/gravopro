@@ -30,8 +30,13 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Kontakt podaci</h3>
               <p className="text-lg">
-                +381 60 3097 128<br />
-                gravopro@gmail.com
+                <a href="tel:+381603097128" className="text-blue-500 hover:underline">
+                  +381 60 3097 128
+                </a>
+                <br />
+                <a href="mailto:gravopro@gmail.com" className="text-blue-500 hover:underline">
+                  gravopro@gmail.com
+                </a>
               </p>
               {/* Social media links */}
               <div className="mt-4 flex space-x-4">
