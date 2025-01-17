@@ -53,6 +53,12 @@ export default function Header() {
                 <Link href="/izrada-proizvoda" className="block px-4 py-2 hover:bg-gray-100 hover:rounded-md text-lg" onClick={closeMenu}>
                   Izrada proizvoda
                 </Link>
+                <Link href="/cnc-graviranje" className="block px-4 py-2 hover:bg-gray-100 hover:rounded-md text-lg" onClick={closeMenu}>
+                  CNC graviranje i sečenje
+                </Link>
+                <Link href="/fiberlaser-graviranje" className="block px-4 py-2 hover:bg-gray-100 hover:rounded-md text-lg" onClick={closeMenu}>
+                  Fiber laser graviranje
+                </Link>
               </div>
             </div>
             <Link href="/o-nama" className="text-xl hover:text-gray-400" onClick={closeMenu}>

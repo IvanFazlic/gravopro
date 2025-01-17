@@ -68,6 +68,9 @@ const Contact = () => {
                 <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
                     E-mail: <a href="mailto:gravopro@gmail.com" className="text-blue-500">gravopro@gmail.com</a>
                 </p>
+                <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
+                    Radno vreme: Ponedeljak - subota 10h-20h
+                </p>
             </div>
             {/* Google Map */}
             <div className="w-full md:w-4/5 p-4 mb-6">

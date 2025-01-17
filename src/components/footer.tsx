@@ -14,7 +14,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Radno vreme</h3>
               <p className="text-lg">
-                Ponedeljak – petak: 10h-18h
+                Ponedeljak – subota: 10h-20h
               </p>
             </div>
 

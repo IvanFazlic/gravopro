@@ -1,3 +1,4 @@
+// pages/o-nama.tsx
 "use client";
 import Carousel from "@/components/Carousel";
 
@@ -5,14 +6,14 @@ const AboutPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-white pt-8 set-an-image">
       <div className="w-4/5 md:w-3/5 p-4 md:p-8 text-left">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">LASERSKO GRAVIRANJE</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Lasersko graviranje</h1>
         <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
           Nudimo usluge laserskog graviranja raznih vrsta materijala sa izuzetnom preciznošću.
         </p>
         <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
           Možemo da graviramo na širokom spektru materijala, uključujući:
         </p>
-        <ul className="text-lg md:text-xl font-semibold text-gray-800 list-disc pl-8 mb-4">
+        <ul className="list-disc list-inside text-lg md:text-xl text-gray-800 mb-4">
           <li>Drvo (hrast, bukva, jasen, medijapan)</li>
           <li>Klirit (pleksiglas)</li>
           <li>Plastiku</li>
@@ -24,7 +25,7 @@ const AboutPage: React.FC = () => {
         <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
           Nudimo uslugu graviranja:
         </p>
-        <ul className="text-lg md:text-xl font-semibold text-gray-800 list-disc pl-8 mb-4">
+        <ul className="list-disc list-inside text-lg md:text-xl text-gray-800 mb-4">
           <li>Reklamne ploče za firme</li>
           <li>Promotivni materijal (rokovnici, privesci, olovke, satovi)</li>
           <li>ID pločice, serijsko obeležavanje i numerisanje</li>
@@ -35,8 +36,8 @@ const AboutPage: React.FC = () => {
           Precizna kontrola brzine i snage lasera omogućava detaljno graviranje, od površinskog do dubokog.
         </p>
       </div>
-      <div className="w-full md:w-4/5 mb-20 md:mb-0">
-        <div className="w-full h-64 md:h-auto">
+      <div className="w-full md:w-4/5 flex-grow mb-5 md:mb-0">
+        <div className="w-full h-auto min-h-[250px]">
           <Carousel directory="laserskoSecenje" />
         </div>
       </div>
