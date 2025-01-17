@@ -4,7 +4,7 @@ import Carousel from "@/components/Carousel";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white pt-8 set-an-image">
+    <div className="flex flex-col items-center min-h-screen bg-white pt-2 set-an-image">
       <div className="w-4/5 md:w-3/5 p-4 md:p-8 text-left">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Izrada proizvoda</h1>
         <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
