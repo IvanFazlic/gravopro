@@ -8,7 +8,7 @@ interface SimpleCarouselProps {
 }
 
 const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory, totalCount }) => {
-  const images = Array.from({ length: totalCount }, (_, i) => `/${directory}/slika${i + 1}.jpg`);
+  const images = Array.from({ length: totalCount }, (_, i) => `/${directory}/slika${i + 1}.png`);
   
 
   const [currentIndex, setCurrentIndex] = useState(0);
