@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
       </div>
       <div className="w-full md:w-4/5 flex-grow mb-5 md:mb-0">
         <div className="w-full h-auto min-h-[250px]">
-          <Carousel directory="fiber" totalCount={9}/>
+          <Carousel directory="fiber" totalCount={8}/>
         </div>
       </div>
     </div>
