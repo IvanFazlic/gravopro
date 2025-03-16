@@ -38,18 +38,6 @@ export default function Home() {
                   gravopro@gmail.com
                 </a>
               </p>
-              {/* Social media links */}
-              <div className="mt-4 flex space-x-4">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
-                  <FaFacebookF size={24} />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
-                  <FaInstagram size={24} />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
-                  <FaLinkedinIn size={24} />
-                </a>
-              </div>
             </div>
           </div>
         </div>
