@@ -1,5 +1,3 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'; // Ikone iz react-icons
-
 export default function Home() {
   return (
     <div>
