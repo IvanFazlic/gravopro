@@ -41,7 +41,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Carousel directory='primeriRada' />
+        <Carousel directory='primerNasegRada' totalCount={6}/>
       </div>
     </div>
   );

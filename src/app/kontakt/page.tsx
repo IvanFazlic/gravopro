@@ -2,13 +2,15 @@ import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
 
 const SMTP_CONFIG = {
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
+    host: 'mail.gravopro.rs',
+    port: 465,
+    secure: true, // Port 465 requires a secure connection (SSL/TLS)
     auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS, 
+        user: process.env.EMAIL_USER, // Should be set to dragan@gravopro.rs
+        pass: process.env.EMAIL_PASS,
     },
+    // Optional: uncomment if you face certificate issues
+    // tls: { rejectUnauthorized: false },
 };
 
 const Contact = () => {
@@ -22,10 +24,16 @@ const Contact = () => {
     
         function createMailOptions(name: string, surname: string, email: string, message: string) {
             return {
-                from: `${name} ${surname} <${email}>`,
-                to: process.env.RECEIVING, // Your receiving email
+                // Use your authenticated email as sender
+                from: process.env.EMAIL_USER, // dragan@gravopro.rs
+                // Set the client's email as reply-to
+                replyTo: email,
+                to: process.env.RECEIVING, // The receiving email address
                 subject: 'Kontakt klijenta',
-                text: `Dobili ste poruku od:\n\nIme: ${name} ${surname}\nEmail: ${email}\nPoruka: ${message}`,
+                text: `Dobili ste poruku od:
+Ime: ${name} ${surname}
+Email: ${email}
+Poruka: ${message}`,
             };
         }
     
@@ -41,22 +49,20 @@ const Contact = () => {
     
         const transporter = nodemailer.createTransport(SMTP_CONFIG);
         const mailOptions = createMailOptions(name, surname, email, message);
-        let bool = true
+        let bool = true;
         try {
             await transporter.sendMail(mailOptions); // Wait for the email to be sent
         } catch (error) {
             console.log(error);
-            bool = false
-        }finally{
-            return bool ? redirect('/success') : redirect('/fail');;
+            bool = false;
+        } finally {
+            return bool ? redirect('/success') : redirect('/fail');
         }
     }
     
     
-
-    
     return (
-        <div className="flex flex-col items-center min-h-screen bg-white pt-8">
+        <div className="flex flex-col items-center min-h-screen bg-white pt-2 set-an-image">
             <div className="w-4/5 md:w-3/5 p-4 md:p-8 text-left">
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Kontakt</h1>
                 <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
@@ -73,11 +79,11 @@ const Contact = () => {
                 </p>
             </div>
             {/* Google Map */}
-            <div className="w-full md:w-4/5 p-4 mb-6">
+            <div className="w-full md:w-3/5 p-4 mb-6">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.4632985501876!2d20.471276690510663!3d44.7509653061625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a710e23bf569f%3A0xbbe811784f34184a!2z0JrQvtC70L7QvdC40ZjQsCwg0JHQtdC-0LPRgNCw0LQ!5e0!3m2!1ssr!2srs!4v1729278005626!5m2!1ssr!2srs"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.4632985501876!2d20.471276690510663!3d44.7509653061625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a710e23bf569f%3A0xbbe811784f34184a!2z0JrQvtC70L7QvdC40ZjQsCwg0JHQtdC-0LPRgNCw0LQ!5e0!3m2!1ssr!2srs!4v1729278005626!5m2!1ssr!2srs&maptype=satellite"
                     width="100%"
-                    height="400" // Increased height for desktop view
+                    height="400"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"

@@ -4,14 +4,12 @@ import Image from 'next/image';
 
 interface SimpleCarouselProps {
   directory: string; // New prop for directory name
+  totalCount : number
 }
 
-const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory }) => {
-  const images = [
-    `/${directory}/image1.jpg`, 
-    `/${directory}/image2.jpg`,
-    `/${directory}/image3.jpg`,
-  ];
+const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory, totalCount }) => {
+  const images = Array.from({ length: totalCount }, (_, i) => `/${directory}/slika${i + 1}.jpg`);
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -31,7 +29,7 @@ const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory }) => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full h-[380px] sm:h-[480px]"> {/* Responsive height */}
+            <div key={index} className="relative flex-shrink-0 w-full h-[380px] sm:h-[550px]"> {/* Responsive height */}
               <Image
                 src={image}
                 alt={`Image ${index + 1}`}
