@@ -73,7 +73,7 @@ Poruka: ${message}`,
                     Mob: <a href="tel:+381603097128" className="text-blue-500">060/ 3097 128</a>
                 </p>
                 <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
-                    E-mail: <a href="mailto:gravopro@gmail.com" className="text-blue-500">gravopro@gmail.com</a>
+                    E-mail: <a href="mailto:gravoprodukt@gmail.com" className="text-blue-500">gravoprodukt@gmail.com</a>
                 </p>
                 <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
                     Radno vreme: Ponedeljak - subota 10h-20h
@@ -81,14 +81,13 @@ Poruka: ${message}`,
             </div>
             {/* Google Map */}
             <div className="w-full md:w-3/5 p-4 mb-6">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.4632985501876!2d20.471276690510663!3d44.7509653061625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a710e23bf569f%3A0xbbe811784f34184a!2z0JrQvtC70L7QvdC40ZjQsCwg0JHQtdC-0LPRgNCw0LQ!5e0!3m2!1ssr!2srs!4v1729278005626!5m2!1ssr!2srs&maptype=satellite"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500.8930123443298!2d20.477348065816756!3d44.75064981728348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a713634d80591%3A0x56ec3d5b4644f2b4!2sLasersko%20se%C4%8Denje%20i%20graviranje%20Beograd%20-%20FD%20Gravoprodukt!5e0!3m2!1ssr!2srs!4v1743851753392!5m2!1ssr!2srs" 
+                width="100%"
+                height="500"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                />
             </div>
             {/* Contact Form */}
             <div className="w-4/5 md:w-3/5 p-4 md:p-8">

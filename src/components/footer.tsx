@@ -32,8 +32,8 @@ export default function Home() {
                   +381 60 3097 128
                 </a>
                 <br />
-                <a href="mailto:gravopro@gmail.com" className="text-blue-500 hover:underline">
-                  gravopro@gmail.com
+                <a href="mailto:gravoprodukt@gmail.com" className="text-blue-500 hover:underline">
+                  gravoprodukt@gmail.com
                 </a>
               </p>
             </div>
