@@ -2,16 +2,17 @@ import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
 
 const SMTP_CONFIG = {
-    host: 'mail.gravopro.rs',
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true, // Port 465 requires a secure connection (SSL/TLS)
     auth: {
-        user: process.env.EMAIL_USER, // Should be set to dragan@gravopro.rs
+        user: process.env.EMAIL_USER, // Set to your Gmail address, e.g., dragan@gravopro.rs
         pass: process.env.EMAIL_PASS,
     },
     // Optional: uncomment if you face certificate issues
     // tls: { rejectUnauthorized: false },
 };
+
 
 const Contact = () => {
     async function submitForm(formData: FormData) {

@@ -29,7 +29,7 @@ const SimpleCarousel: React.FC<SimpleCarouselProps> = ({ directory, totalCount }
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full h-[380px] sm:h-[550px]"> {/* Responsive height */}
+            <div key={index} className="relative flex-shrink-0 w-full h-[240px] sm:h-[680px]"> {/* Responsive height */}
               <Image
                 src={image}
                 alt={`Image ${index + 1}`}

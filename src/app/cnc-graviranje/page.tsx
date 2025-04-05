@@ -23,7 +23,7 @@ const AboutPage: React.FC = () => {
           CNC tehnologija omogućava veću fleksibilnost i detaljnu obradu za različite industrijske i personalizovane proizvode.
         </p>
       </div>
-      <div className="w-full md:w-4/5 flex-grow mb-5 md:mb-0">
+      <div className="w-full md:w-5/5 flex-grow mb-5 md:mb-0">
         <div className="w-full h-auto min-h-[250px]">
           <Carousel directory="cnc" totalCount={4} />
         </div>
