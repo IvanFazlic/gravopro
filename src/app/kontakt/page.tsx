@@ -30,7 +30,7 @@ const Contact = () => {
                 // Set the client's email as reply-to
                 replyTo: email,
                 to: process.env.RECEIVING, // The receiving email address
-                subject: 'Kontakt klijenta',
+                subject: `Kontakt klijenta ${name}`,
                 text: `Dobili ste poruku od:
 Ime: ${name} ${surname}
 Email: ${email}
